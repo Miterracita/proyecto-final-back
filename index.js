@@ -17,13 +17,13 @@ connectDB();
 connectCloudinary();
 
 //autorizamos a realizar peticiones al back
-// app.use(cors());
+app.use(cors());
 // Permite el dominio específico del frontend en producción
-app.use(cors({
-    origin: 'https://despliegue-front-theta.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// app.use(cors({
+//     origin: 'https://despliegue-front-theta.vercel.app',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 
 // para que pueda ser capaz de entender el formato .json
 app.use(express.json());
